@@ -1,0 +1,45 @@
+<html>
+<head>
+  <title>Hi my pookie</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Comic+Sans+MS&display=swap');
+
+    body {
+      background-color: #FFC0DC;
+      text-align: center;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+    }
+
+    button {
+      font-size: 20px;
+      padding: 15px 30px;
+      border-radius: 15px;
+      border: none;
+      cursor: pointer;
+      margin: 10px;
+      transition: background-color 0.3s;
+      background-color: #FF69B4; /* Mismo color para ambos botones */
+      color: white;
+    }
+
+    button:hover {
+      background-color: #FF1493;
+    }
+  </style>
+</head>
+<body>
+  <h1>¿Do you wanna be my valentines?</h1>
+  <p>Si dices sí, no hay vuelta atrás</p>
+  <button onclick="alert('Lo sabia my pookie 0w0');" id="botonsi">Sí</button>
+  <button onclick="moverBoton()" id="botonno">No</button>
+
+  <script>
+    function moverBoton() {
+      const botonNo = document.getElementById('botonno');
+      botonNo.style.position = 'absolute';
+      botonNo.style.left = Math.random() * (window.innerWidth - botonNo.offsetWidth) + 'px';
+      botonNo.style.top = Math.random() * (window.innerHeight - botonNo.offsetHeight) + 'px';
+    }
+  </script>
+</body>
+</html>
